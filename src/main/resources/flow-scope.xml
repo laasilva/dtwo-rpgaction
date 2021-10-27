@@ -13,8 +13,8 @@
     <bean id="newUserScope" class="com.dtwo.rpgaction.scopes.commons.ScopeProcessor">
        <constructor-arg>
            <list>
-                <bean id="createUser" class="com.dtwo.rpgaction.scopes.user.CreateUser" />
-                <bean id="userRequestValidator" class="com.dtwo.rpgaction.scopes.user.UserRequestValidator" />
+                <bean id="userRequestValidator" class="com.dtwo.rpgaction.scopes.user.step1.UserRequestValidator" />
+                <bean id="createUser" class="com.dtwo.rpgaction.scopes.user.step2.CreateUser" />
            </list>
        </constructor-arg>
     </bean>

@@ -13,6 +13,7 @@ public class UserMapperImpl implements UserMapper {
 
         userEntity.setUsername(userRequest.getUsername());
         userEntity.setPassword(userRequest.getPassword());
+        userEntity.setEmail(userRequest.getEmail());
         userEntity.setRegistrationDate(new Date());
 
         return userEntity;

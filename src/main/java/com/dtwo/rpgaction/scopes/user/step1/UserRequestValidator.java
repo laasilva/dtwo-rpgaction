@@ -1,4 +1,4 @@
-package com.dtwo.rpgaction.scopes.user;
+package com.dtwo.rpgaction.scopes.user.step1;
 
 import com.dtwo.rpgaction.exception.ActionException;
 import com.dtwo.rpgaction.exception.ValidationException;
@@ -33,6 +33,10 @@ public class UserRequestValidator extends BaseScopeItem {
         }
 
         if(userRequest.getPassword().isEmpty() || userRequest.getPassword() == null) {
+            throw new ValidationException(Constants.USER_VALIDATION_PASSWORD_ERROR, HttpStatus.BAD_REQUEST);
+        }
+
+        if(userRequest.getEmail().isEmpty() || userRequest.getEmail() == null) {
             throw new ValidationException(Constants.USER_VALIDATION_PASSWORD_ERROR, HttpStatus.BAD_REQUEST);
         }
 

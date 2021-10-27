@@ -12,6 +12,7 @@ public class Constants {
     public static final String GENERIC_VALIDATION_ERROR = "Erro na validação - ";
     public static final String USER_VALIDATION_USERNAME_ERROR = "Username não pode estar vazio.";
     public static final String USER_VALIDATION_PASSWORD_ERROR = "Password não pode estar vazio.";
+    public static final String USER_VALIDATION_EMAIL_ERROR = "Email não pode estar vazio.";
     public static final String USER_USERNAME_EXISTS_ERROR = "Nome de usuário já existe.";
 
     public static final String GENERIC_ACTION_ERROR = "Erro ao processar informações - ";

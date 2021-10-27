@@ -15,12 +15,15 @@ import java.util.Date;
 @Builder
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @NonNull
     private Long id;
 
     @NonNull
     private String username;
+
+    @NonNull
+    private String email;
 
     @NonNull
     private String password;

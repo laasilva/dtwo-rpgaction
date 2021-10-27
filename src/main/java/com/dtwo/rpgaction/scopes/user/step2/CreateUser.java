@@ -1,4 +1,4 @@
-package com.dtwo.rpgaction.scopes.user;
+package com.dtwo.rpgaction.scopes.user.step2;
 
 import com.dtwo.rpgaction.exception.ActionException;
 import com.dtwo.rpgaction.mapper.UserMapper;
