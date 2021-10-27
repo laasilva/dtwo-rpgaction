@@ -1,0 +1,21 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+       xsi:schemaLocation=
+               "http://www.springframework.org/schema/beans
+                http://www.springframework.org/schema/beans/spring-beans.xsd
+                http://www.springframework.org/schema/context
+                http://www.springframework.org/schema/context/spring-context.xsd
+                http://www.springframework.org/schema/context/mvc" default-autowire="byName">
+
+    <bean id="newUserScope" class="com.dtwo.rpgaction.scopes.commons.ScopeProcessor">
+       <constructor-arg>
+           <list>
+                <bean id="createUser" class="com.dtwo.rpgaction.scopes.user.CreateUser" />
+                <bean id="userRequestValidator" class="com.dtwo.rpgaction.scopes.user.UserRequestValidator" />
+           </list>
+       </constructor-arg>
+    </bean>
+</beans>
