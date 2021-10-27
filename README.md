@@ -12,4 +12,4 @@ _______________________________
 
 | microservices flow                      |
 |---------------------------------------- |
-|![Image of Yaktocat](./DTWOONE.png)  |
+|![Initial flow](./DTWOONE.png)  |
