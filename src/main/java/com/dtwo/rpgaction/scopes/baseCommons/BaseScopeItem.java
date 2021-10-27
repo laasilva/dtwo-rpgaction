@@ -1,8 +1,8 @@
-package com.dtwo.rpgaction.scopes.commons;
+package com.dtwo.rpgaction.scopes.baseCommons;
 
 import com.dtwo.rpgaction.exception.ScopeContextException;
 import com.dtwo.rpgaction.model.commons.ScopeContext;
-import com.dtwo.rpgaction.utils.Constants;
+import com.dtwo.rpgaction.utils.AppConstants;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 
@@ -18,7 +18,7 @@ public abstract class BaseScopeItem {
             context.setCurrentPayload(currentPayload);
             context.addToScopePayload(currentPayload.getClass().getCanonicalName(), currentPayload);
         } else {
-            throw new ScopeContextException(Constants.PAYLOAD_SCOPE_ERROR, HttpStatus.PRECONDITION_FAILED);
+            throw new ScopeContextException(AppConstants.PAYLOAD_SCOPE_ERROR, HttpStatus.PRECONDITION_FAILED);
         }
 
         return this.processor(currentPayload, context);
@@ -29,7 +29,7 @@ public abstract class BaseScopeItem {
             context.setCurrentPayload(currentPayload);
             context.addToScopePayload(currentPayload.getClass().getCanonicalName(), currentPayload);
         } else {
-            throw new ScopeContextException(Constants.PAYLOAD_SCOPE_ERROR, HttpStatus.PRECONDITION_FAILED);
+            throw new ScopeContextException(AppConstants.PAYLOAD_SCOPE_ERROR, HttpStatus.PRECONDITION_FAILED);
         }
     }
 

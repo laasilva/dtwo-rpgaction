@@ -2,8 +2,8 @@ package com.dtwo.rpgaction.controller;
 
 import com.dtwo.rpgaction.exception.GeneralControllerException;
 import com.dtwo.rpgaction.model.request.UserRequest;
-import com.dtwo.rpgaction.scopes.commons.ScopeProcessor;
-import com.dtwo.rpgaction.utils.Constants;
+import com.dtwo.rpgaction.scopes.baseCommons.ScopeProcessor;
+import com.dtwo.rpgaction.utils.AppConstants;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -28,7 +28,7 @@ public class UserController {
         try {
             return createUserContext.execute(userRequest);
         } catch (GeneralControllerException ex) {
-            return new ResponseEntity<>(Constants.GENERIC_CONTROLLER_ERROR, HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity<>(AppConstants.GENERIC_CONTROLLER_ERROR, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 

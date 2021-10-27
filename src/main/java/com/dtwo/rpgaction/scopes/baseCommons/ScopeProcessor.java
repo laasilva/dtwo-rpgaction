@@ -1,13 +1,10 @@
-package com.dtwo.rpgaction.scopes.commons;
+package com.dtwo.rpgaction.scopes.baseCommons;
 
 import com.dtwo.rpgaction.exception.ScopeContextException;
 import com.dtwo.rpgaction.model.commons.ScopeContext;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.annotation.AnnotationAwareOrderComparator;
-import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
-import java.util.Collections;
 import java.util.List;
 
 @Component

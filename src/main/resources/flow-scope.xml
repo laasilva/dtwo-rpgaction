@@ -10,7 +10,7 @@
                 http://www.springframework.org/schema/context/spring-context.xsd
                 http://www.springframework.org/schema/context/mvc" default-autowire="byName">
 
-    <bean id="newUserScope" class="com.dtwo.rpgaction.scopes.commons.ScopeProcessor">
+    <bean id="newUserScope" class="com.dtwo.rpgaction.scopes.baseCommons.ScopeProcessor">
        <constructor-arg>
            <list>
                 <bean id="userRequestValidator" class="com.dtwo.rpgaction.scopes.user.step1.UserRequestValidator" />

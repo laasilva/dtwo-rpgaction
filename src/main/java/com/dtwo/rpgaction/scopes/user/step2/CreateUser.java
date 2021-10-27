@@ -8,8 +8,8 @@ import com.dtwo.rpgaction.model.entities.User;
 import com.dtwo.rpgaction.model.request.UserRequest;
 import com.dtwo.rpgaction.model.response.GenericResponse;
 import com.dtwo.rpgaction.repositories.UserRepository;
-import com.dtwo.rpgaction.scopes.commons.BaseScopeItem;
-import com.dtwo.rpgaction.utils.Constants;
+import com.dtwo.rpgaction.scopes.baseCommons.BaseScopeItem;
+import com.dtwo.rpgaction.utils.AppConstants;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
@@ -33,10 +33,10 @@ public class CreateUser extends BaseScopeItem {
         try {
             userRepository.save(user);
         } catch (ActionException ex) {
-            throw new ActionException(Constants.USER_ACTION_SAVE_USER_ERROR, ex);
+            throw new ActionException(AppConstants.USER_ACTION_SAVE_USER_ERROR, ex);
         }
 
-        return GenericResponse.builder().message(String.format(Constants.USER_CREATION_SUCCESS, user.getId(), user.getUsername()))
+        return GenericResponse.builder().message(String.format(AppConstants.USER_CREATION_SUCCESS, user.getId(), user.getUsername()))
                 .status(HttpStatus.CREATED).build();
     }
 }

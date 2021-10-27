@@ -1,6 +1,6 @@
 package com.dtwo.rpgaction.utils;
 
-public class Constants {
+public class AppConstants {
 
     public static final String USER_CREATION_SUCCESS = "Usuario criado com sucesso! id - %s, username - %s";
 
