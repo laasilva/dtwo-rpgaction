@@ -14,7 +14,7 @@ import java.util.Optional;
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
     @Query("FROM User u WHERE u.username = :username")
-    List<User> findUserByUsername(@Param("username") String username);
+    User findUserByUsername(@Param("username") String username);
 
     @Override
     <S extends User> S save(S entity);

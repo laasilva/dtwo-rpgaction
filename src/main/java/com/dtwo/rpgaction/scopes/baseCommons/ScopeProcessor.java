@@ -29,11 +29,16 @@ public class ScopeProcessor extends BaseScopeItem {
 
     @Override
     public Object processor(Object currentPayload, ScopeContext context) {
-        for (int i = 1; i < this.itens.size(); ++i) {
-            if(!(itens.get(i) instanceof ScopeProcessor)) {
-                Object payload = itens.get(i).processor(currentPayload, context);
-                super.doExecute(payload);
+        if(this.itens.size() > 1) {
+            for (int i = 1; i < this.itens.size(); ++i) {
+                if(!(itens.get(i) instanceof ScopeProcessor)) {
+                    Object payload = itens.get(i).processor(currentPayload, context);
+                    super.doExecute(payload);
+                }
             }
+        } else {
+            Object payload = itens.get(0).processor(currentPayload, context);
+            super.doExecute(payload);
         }
 
         return this.context.getCurrentPayload();

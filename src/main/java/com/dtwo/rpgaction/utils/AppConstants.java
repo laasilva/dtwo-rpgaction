@@ -18,5 +18,7 @@ public class AppConstants {
     public static final String GENERIC_ACTION_ERROR = "Erro ao processar informações - ";
     public static final String USER_ACTION_SAVE_USER_ERROR = "Erro ao salvar novo usuário.";
 
+    public static final String USER_DOES_NOT_EXISTS = "Não existem usuários cadastrados com esse username: %s.";
+
 
 }

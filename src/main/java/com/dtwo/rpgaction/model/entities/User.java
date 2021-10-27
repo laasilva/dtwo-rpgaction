@@ -1,5 +1,6 @@
 package com.dtwo.rpgaction.model.entities;
 
+import com.dtwo.rpgaction.model.enums.Role;
 import lombok.*;
 import org.springframework.lang.NonNull;
 
@@ -31,4 +32,7 @@ public class User {
     @Column(name = "reg_date")
     @NonNull
     private Date registrationDate;
+
+    @NonNull
+    private Role role;
 }

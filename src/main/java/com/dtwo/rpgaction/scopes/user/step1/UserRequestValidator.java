@@ -13,6 +13,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
+import java.util.Optional;
 
 @Component
 public class UserRequestValidator extends BaseScopeItem {
@@ -36,9 +37,9 @@ public class UserRequestValidator extends BaseScopeItem {
             throw new ValidationException(AppConstants.USER_VALIDATION_PASSWORD_ERROR, HttpStatus.BAD_REQUEST);
         }
 
-        List<User> users = userRepository.findUserByUsername(userRequest.getUsername());
+       User user = userRepository.findUserByUsername(userRequest.getUsername());
 
-        if(!users.isEmpty()) {
+        if(user != null) {
             throw new ActionException(AppConstants.USER_USERNAME_EXISTS_ERROR, HttpStatus.CONFLICT);
         }
 
