@@ -1,6 +1,5 @@
 package com.dtwo.rpgaction.model.enums;
 
-import java.math.BigInteger;
 import java.util.Arrays;
 import java.util.Optional;
 
@@ -17,7 +16,7 @@ public enum Role {
         this.description = description;
     }
 
-    public Role getRoleByIdOrDescription(Object filter) {
+    public static Role getRoleByIdOrDescription(Object filter) {
         if(filter instanceof String) {
             Optional<Role> findAny = Arrays.asList(Role.values()).stream().filter(role -> role.getDescription().equals((String) filter)).findAny();
             if(findAny.isPresent()) return findAny.get();
