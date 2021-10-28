@@ -7,7 +7,9 @@ public class PasswordEncoder {
     @Autowired
     private BCryptPasswordEncoder passwordEncoder;
 
-    private PasswordEncoder(){}
+    public PasswordEncoder() {
+        this.passwordEncoder = new BCryptPasswordEncoder();
+    }
 
     public String encodePassword(String password) {
         return passwordEncoder.encode(password);

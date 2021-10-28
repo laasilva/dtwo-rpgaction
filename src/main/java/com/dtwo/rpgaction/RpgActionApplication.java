@@ -9,7 +9,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
-@ComponentScan("com.dtwo.rpgaction")
+@ComponentScan("com.dtwo.rpgaction.*")
 @EntityScan(basePackageClasses={User.class})
 @EnableJpaRepositories(basePackageClasses={UserRepository.class})
 public class RpgActionApplication {

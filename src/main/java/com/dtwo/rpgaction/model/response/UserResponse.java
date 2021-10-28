@@ -1,15 +1,18 @@
-package com.dtwo.rpgaction.model.request;
+package com.dtwo.rpgaction.model.response;
 
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.Date;
+
 @Getter
 @Setter
 @Builder
-public class UserRequest {
+public class UserResponse {
+    private Long id;
     private String username;
-    private String password;
     private String email;
+    private Date registrationDate;
     private String role;
 }
