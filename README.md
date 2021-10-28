@@ -1,6 +1,6 @@
 # dtwo-rpgaction
 
-[![Total alerts](https://img.shields.io/lgtm/alerts/g/laasilva/dtwo-signup-service.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/laasilva/dtwo-signup-service/alerts/) [![Language grade: Java](https://img.shields.io/lgtm/grade/java/g/laasilva/dtwo-signup-service.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/laasilva/dtwo-signup-service/context:java)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/0651bd5e338245de8970648b73ced8aa)](https://www.codacy.com/gh/laasilva/dtwo-rpgaction/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=laasilva/dtwo-rpgaction&amp;utm_campaign=Badge_Grade)
 ## Description
 This repoisitory is part of a structure meant to serve as a general flow for future projects.
 _______________________________
