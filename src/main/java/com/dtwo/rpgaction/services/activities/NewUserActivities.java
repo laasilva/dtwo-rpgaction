@@ -5,7 +5,6 @@ import com.dtwo.rpgaction.exception.ValidationException;
 import com.dtwo.rpgaction.mapper.UserMapper;
 import com.dtwo.rpgaction.mapper.UserMapperImpl;
 import com.dtwo.rpgaction.model.entities.User;
-import com.dtwo.rpgaction.model.enums.Role;
 import com.dtwo.rpgaction.model.request.UserRequest;
 import com.dtwo.rpgaction.model.response.GenericResponse;
 import com.dtwo.rpgaction.repositories.UserRepository;
