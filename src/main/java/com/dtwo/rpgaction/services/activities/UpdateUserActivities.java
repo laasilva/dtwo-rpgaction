@@ -9,7 +9,9 @@ import com.dtwo.rpgaction.repositories.UserRepository;
 import com.dtwo.rpgaction.utils.AppConstants;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Component;
 
+@Component
 public class UpdateUserActivities extends BaseActivity {
 
     @Autowired
