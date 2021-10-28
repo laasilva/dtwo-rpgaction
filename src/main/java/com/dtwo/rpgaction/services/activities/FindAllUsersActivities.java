@@ -28,7 +28,7 @@ public class FindAllUsersActivities extends BaseActivity {
 
         List<User> user = userRepository.findAll();
 
-        if(!user.isEmpty() || user != null) {
+        if(user != null) {
             return userMapper.entityListToResponseList(user);
         } else {
             return GenericResponse.builder()
